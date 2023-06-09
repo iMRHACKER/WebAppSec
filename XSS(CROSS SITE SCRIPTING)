@@ -2,6 +2,38 @@
 -------------------------------------
 |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
+|| Background Concept about XSS ||
+------------------------------------
+Cross-Site Scripting (XSS) attacks are a type of injection, in which malicious scripts are 
+injected into otherwise benign and trusted web sites. XSS attacks occur when an 
+attacker uses a web application to send malicious code, generally in the form of a 
+browser side script, to a different end user. Flaws that allow these attacks to succeed 
+are quite widespread and occur anywhere a web application uses input from a user 
+within the output it generates without validating or encoding it.
+● An attacker can use XSS to send a malicious script to an unsuspecting user. The end 
+user’s browser has no way to know that the script should not be trusted, and will 
+execute the script. Because it thinks the script came from a trusted source, the 
+malicious script can access any cookies, session tokens, or other sensitive 
+information retained by the browser and used with that site.
+===============================================================================================================================================================================
+
+|| How to Hunt for XSS ||
+---------------------------
+● Find a Input Parameter , Give any input There . If your input 
+reflect or stored any where there may be XSS 
+● Try to execute any Javascript code there , if you succeed to 
+execute any javascript there then there is a xss 
+● Exploitation of XSS
+=================================================================================================================================================================================
+
+|| XSS ||
+---------------
+• Client	Side	Vulnerability	
+• Insert	Javscript	into	web	page	
+– Persistent	or	Non-Persistent	
+• Session	Hijacking
+______________________________________________________________________________------------------------------------------------------_______________________________________________
+
 || XSS - Types ||
 --------------------
 • Reflective XSS: Needs user interaction
@@ -9,7 +41,31 @@
 • DOM XSS: Takes place client side 
 • Self-XSS: Affects only you
 • Blind XSS: Fires for someone else
+
+• Persistent	
+• Non-Persistent	
+• DOM	based
 __________________________________________________________________________--------------------------------------------------____________________________________________________
+
+|| Basic XSS || 
+----------------------
+● Find a Input Parameter , Give any input There . If your input 
+reflect or stored any where there may be XSS 
+● Try to execute any Javascript code there , if you succeed to 
+execute any javascript there then there is a xss 
+● Exploitation of XSS
+____________________________________________________________________________------------------------------------------------____________________________________________________
+
+|| Basic XSS ||
+----------------------
+Steps
+============
+● Find some common page such as – Contact Us | Search bar | 
+Comment Box | Forums |Signup | Login Page | etc 
+● Find Input Parameters 
+● Give any Input There , if your Input reflect back to you 
+● Try to Inject any javascript there
+__________________________________________________________________________________----------------------------------------------________________________________________________
 
  || XSS - Approach ||
  ----------------------
@@ -110,6 +166,13 @@ _____________________________________________________@@@@@@@@@@@@@@@@@@@@@@@@@@@
 • > is %26gt;
 ____________________________________________________________________-------------------------------------______________________________________________________________________
 
+|| DOM	based	XSS ||
+-----------------------
+• Type	0	XSS	
+• AGack	occurs	due	to	modifica+on	of	DOM	
+• hGps://www.owasp.org/index.php/DOM_Based_XSS	
+____________________________________________________________________________-------------------------------------_____________________________________________________________
+
 || XSS – DOM, Source, JS ||
 -----------------------------
 • Inspect source code - view page source
@@ -209,7 +272,13 @@ ___________________________________________________________________________-----
 • Use XSS to perform CSRF
 • Leak sensitive information
 • Weak CORS config in combo with XSS
+
+● Cookie theft
+● Keylogging
+● Phishing
+● URL Redirection
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!####################@@@@@@@@@@$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$@@@@@@@@@@#####################!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 
 
 
