@@ -1,4 +1,42 @@
-|| The	HTTP	Protocol ||
-----------------------------
+|| Hypertext	Transfer	Protocol || 
+------------------------------- 
 
+• Client-Server	based	architecture	
+• Request-Response	model	to	serve	Resources	
+• Resources	are	iden+fied	by	URI	/	URL	
+• Versions	–	HTTP	1.0/1.1		
+– 1.1	can	reuse	connec+on	for	mul+ple	URIs
 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+|| HTTP	Request	Methods ||
+-----------------------------
+• GET	
+– Parameters	in	URL	
+• POST	
+– Form	submissions,	data	in	message	body	
+• OPTIONS	
+– List	of	methods	supported	for	URL	
+• HEAD	
+– Response	for	GET	but	no	message	body	
+• TRACE	
+– Echo	client	request	back	for	diagnos+cs	
+• PUT	
+– Store	in	URI	
+• DELETE	
+– Delete	resource	
+• …	
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+|| Exercise ||
+----------------
+• Find	appropriate	Nmap	NSE	scripts	which	test	for	
+HTTP	Verb	tampering	
+• Find	appropriate	Metasploit	module	for	the	same	
+• Do	a	demo	
+
+!!!!!!!!!!!!!!!!!!!!!!!@@@@@@@@@@@@@@@@@@@@@@@@@@@@####################$$$$$$$$$$$$$$$$$$$$$$$####################@@@@@@@@@@@@@@@@@@@@@@@@@@!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+______________________________
+| THANKS FOR VISIT MR.HACKER |
+______________________________
