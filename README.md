@@ -4,7 +4,7 @@ Welcome to the ultimate Web Application Bug Bounty Hunting course.
 
 _Your instructor is MR.HACKER. He is a Cyber Security veteran with years of experience. MR>HACKER holds some of the highest certification incl. CISSP, Portswigger BSCP, CCIE, PCI ISA and PCIP. He works as a Red Teamer for a big tech company and engages in Bug Bounty programs where he found thousands of critical and high vulnerabilities._
 
-_In this course MR.HACKER students through a step-by-step methodology on how to uncover web vulnerabilities. The theoretical lecture is complimented with the relevant free practical Burp labs to reinforce the knowledge. Martin is not just inserting the payload but explains each step on finding the vulnerability and why it can be exploited in a certain way. The videos are easy to follow along and replicate. This training is highly recommended for anyone who wants to become a professional Web Application Bug Bounty Hunter._
+_In this course MR.HACKER students through a step-by-step methodology on how to uncover web vulnerabilities. The theoretical lecture is complimented with the relevant free practical Burp labs to reinforce the knowledge. Martin is not just inserting the payload but explains each step on finding the vulnerability and why it can be exploited in a certain way. The easy way to follow along and replicate. This training is highly recommended for anyone who wants to become a professional Web Application Bug Bounty Hunter._
 
 Course outline:
 ------------------
